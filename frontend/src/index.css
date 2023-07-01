@@ -1,0 +1,11 @@
+@import url('./bootstrap.min.css');
+@import url('./bootstrap-icons.css');
+
+@font-face {
+  font-family: 'Custom Font';
+  src: url('./fonts/custom-font.ttf');
+}
+
+body {
+  font-family: 'Custom Font';
+}
