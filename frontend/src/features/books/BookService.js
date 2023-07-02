@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/api/books/'
+const API_URL = 'https://test-mern-app-books-api.vercel.app/api/books/'
 
 const add = async (bookData, token) => {
   const config = {
