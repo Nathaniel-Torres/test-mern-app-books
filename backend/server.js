@@ -14,7 +14,7 @@ connectDB()
 const app = express()
 
 app.use(cors({
-  origin: [""],
+  origin: ["https://test-mern-app-books-frontend.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }))
