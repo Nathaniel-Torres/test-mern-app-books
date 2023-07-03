@@ -1,10 +1,12 @@
-import Row from 'react-bootstrap/Row'
+import Navbar from 'react-bootstrap/Navbar'
 
 function Footer() {
   return (
-    <Row className='mt-3 bg-dark text-light' data-bs-theme='dark'>
-      <p>@ 2023</p>
-    </Row>
+    <Navbar collapseOnSelect expand="md" variant='dark' className='bg-dark mb-3'>
+      <Container>
+        <Navbar.Brand>@ 2023</Navbar.Brand>
+      </Container>
+    </Navbar>
   )
 }
 
