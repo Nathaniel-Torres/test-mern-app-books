@@ -69,7 +69,7 @@ function Login() {
           </Col>
 
           <Col md='8'>
-            <Container className='bg-light rounded-3'>
+            <Container className='bg-light rounded-3 py-4'>
               <Form onSubmit={onSubmit}>
 
                 <Row className='text-center mb-2'>
