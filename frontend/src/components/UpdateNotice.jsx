@@ -3,9 +3,10 @@ import Alert from 'react-bootstrap/Alert'
 function UpdateNotice() {
   const githubRepo = '#'
   const heading = 'Important! (Please read below)'
-  const updateNote = 'Last updated: 7/3/2023 3:34PM GMT+8'
+  const updateNote = 'Last updated: 7/3/2023 6:28PM GMT+8'
   const changes = [
-    'Design enhancement and some UI fixes.',
+    'Server-side configuration fix',
+    'Login UI redesign'
   ]
 
   return (
