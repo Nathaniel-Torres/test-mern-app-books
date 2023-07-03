@@ -60,7 +60,7 @@ function Login() {
 
   return (
       <Container>
-        <Row className='align-items-center'>
+        <Row className='align-items-center mb-3'>
 
           <Col className='d-none d-md-grid' md='4'>
             <Container className='d-flex justify-content-center align-items-center'>
@@ -69,24 +69,26 @@ function Login() {
           </Col>
 
           <Col md='8'>
-            <Form onSubmit={onSubmit} className='bg-light rounded-3'>
+            <Container className='bg-light rounded-3'>
+              <Form onSubmit={onSubmit}>
 
-              <Row className='text-center mb-3'>
-                <h1 className='lead fw-bold'>Login to your account</h1>
-                <p>Please fill in the require fields to login.</p>
-              </Row>
+                <Row className='text-center mb-2'>
+                  <h1 className='lead fw-bold'>Login to your account</h1>
+                  <p>Please fill in the require fields to login.</p>
+                </Row>
 
-              <Form.Group className='mb-3'>
-                <Form.Control type='email' name='email' id='email' placeholder='Enter your email' onChange={onChange} />
-              </Form.Group>
+                <Form.Group className='mb-3'>
+                  <Form.Control type='email' name='email' id='email' placeholder='Enter your email' onChange={onChange} />
+                </Form.Group>
 
-              <Form.Group className='mb-3'>
-                <Form.Control type='password' name='password' id='password' placeholder='Enter your password' onChange={onChange} />
-              </Form.Group>
+                <Form.Group className='mb-3'>
+                  <Form.Control type='password' name='password' id='password' placeholder='Enter your password' onChange={onChange} />
+                </Form.Group>
 
-              <Button type='submit' variant='dark'></Button>
+                <Button type='submit' variant='dark'>Submit</Button>
 
-            </Form>
+              </Form>
+            </Container>
           </Col>
 
         </Row>
