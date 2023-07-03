@@ -4,6 +4,11 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { login, reset } from '../features/auth/AuthSlice'
 import Spinner from '../components/Spinner'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
+import UpdateNotice from '../components/UpdateNotice'
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -54,6 +59,22 @@ function Login() {
 
   return (
     <>
+
+      <Container>
+        <UpdateNotice />
+        <Row>
+
+          <Col className='d-none d-md-grid' md='4'>
+
+          </Col>
+
+          <Col md='8'>
+
+          </Col>
+
+        </Row>
+      </Container>
+
       <div className='container'>
         <h1>Login to your account</h1>
         <h5>Please fill in all fields to login</h5>
