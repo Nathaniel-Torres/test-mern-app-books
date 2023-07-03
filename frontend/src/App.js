@@ -12,15 +12,15 @@ function App() {
   return (
     <>
       <Router>
-        <Container>
-          <Header />
+        <Header />
+        <Container fluid className="py-3 content">
           <Routes>
             <Route path='/' element={ <Dashboard /> } />
             <Route path='/register' element={ <Register /> } />
             <Route path='/login' element={ <Login /> } />
           </Routes>
-          <Footer />
         </Container>
+        <Footer />
       </Router>
       <ToastContainer />
     </>

@@ -6,6 +6,7 @@ import BookItem from '../components/BookItem'
 import Spinner from '../components/Spinner'
 import { displayBooks, reset } from '../features/books/BookSlice'
 import { toast } from 'react-toastify'
+import Row from 'react-bootstrap/Row'
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -41,7 +42,7 @@ function Dashboard() {
   }
 
   return (
-    <>
+    <Row className='h-100'>
       <div className="container my-3 text-center">
         <h1>Welcome {user && user.name }</h1>
       </div>
@@ -61,7 +62,7 @@ function Dashboard() {
       </div>
 
       <BookForm />
-    </>
+    </Row>
   )
 }
 

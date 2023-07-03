@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { register, reset } from '../features/auth/AuthSlice'
 import Spinner from '../components/Spinner'
+import Row from 'react-bootstrap/Row'
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -60,7 +61,7 @@ function Register() {
   }
 
   return (
-    <>
+    <Row className='h-100'>
       <div className='container'>
         <h1>Create an account</h1>
         <h5>Please fill in all the required fields.</h5>
@@ -121,7 +122,7 @@ function Register() {
 
         </form>
       </div>
-    </>
+    </Row>
   )
 }
 

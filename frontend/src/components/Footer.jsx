@@ -2,11 +2,9 @@ import Navbar from 'react-bootstrap/Navbar'
 
 function Footer() {
   return (
-    <Navbar collapseOnSelect expand="md" variant='dark' className='bg-dark mb-3'>
-      <Container>
-        <Navbar.Brand>@ 2023</Navbar.Brand>
-      </Container>
-    </Navbar>
+    <Container fluid className="footer bg-dark text-light text-center py-3">
+      <p>@2023</p>
+    </Container>
   )
 }
 
