@@ -7,6 +7,7 @@ import Spinner from '../components/Spinner'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import UpdateNotice from '../components/UpdateNotice'
 
@@ -62,14 +63,23 @@ function Login() {
 
       <Container>
         <UpdateNotice />
-        <Row>
+        <Row className='align-items-center'>
 
           <Col className='d-none d-md-grid' md='4'>
-
+            <Container className='d-flex justify-content-center align-items-center'>
+              <img src="../assets/images/login.svg" alt="..." />
+            </Container>
           </Col>
 
           <Col md='8'>
+            <Form onSubmit={onSubmit}>
 
+              <Row className='text-center'>
+                <h1 className='lead fw-bold'>Login to your account</h1>
+                <p>Please fill in the require fields to login.</p>
+              </Row>
+
+            </Form>
           </Col>
 
         </Row>
