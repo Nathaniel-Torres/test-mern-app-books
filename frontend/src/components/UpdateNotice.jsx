@@ -9,7 +9,7 @@ function UpdateNotice() {
   ]
 
   return (
-    <Alert variant='info' data-bs-theme='dark' className='mb-3'>
+    <Alert variant='info' className='mb-3'>
       <Alert.Heading>{heading}</Alert.Heading>
       <p>This web app is for live demonstration purposes only and is a personal project of @nasanierunatto. Some features are under development and it is uncertain to receive future updates. Still, thank you for visiting and using this website.</p>
       <hr />

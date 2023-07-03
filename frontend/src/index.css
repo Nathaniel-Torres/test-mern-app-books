@@ -8,10 +8,4 @@
 body {
   font-family: 'Custom Font';
   background: linear-gradient(to right, slateblue, tomato) no-repeat fixed;
-  color: white;
-}
-
-.form-control {
-  background-color: rgba(20, 20, 20, 0.644);
-  color: white;
 }

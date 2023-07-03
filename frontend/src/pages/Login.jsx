@@ -59,10 +59,7 @@ function Login() {
   }
 
   return (
-    <>
-
       <Container>
-        <UpdateNotice />
         <Row className='align-items-center'>
 
           <Col className='d-none d-md-grid' md='4'>
@@ -72,56 +69,31 @@ function Login() {
           </Col>
 
           <Col md='8'>
-            <Form onSubmit={onSubmit}>
+            <Form onSubmit={onSubmit} className='bg-light rounded-3'>
 
-              <Row className='text-center'>
+              <Row className='text-center mb-3'>
                 <h1 className='lead fw-bold'>Login to your account</h1>
                 <p>Please fill in the require fields to login.</p>
               </Row>
+
+              <Form.Group className='mb-3'>
+                <Form.Control type='email' name='email' id='email' placeholder='Enter your email' onChange={onChange} />
+              </Form.Group>
+
+              <Form.Group className='mb-3'>
+                <Form.Control type='password' name='password' id='password' placeholder='Enter your password' onChange={onChange} />
+              </Form.Group>
+
+              <Button type='submit' variant='dark'></Button>
 
             </Form>
           </Col>
 
         </Row>
+
+        <UpdateNotice />
+
       </Container>
-
-      <div className='container'>
-        <h1>Login to your account</h1>
-        <h5>Please fill in all fields to login</h5>
-
-        <form onSubmit={onSubmit}>
-
-          <div className="form-group mb-2">
-            <input
-              className='form-control'
-              type="email"
-              name="email"
-              id="email"
-              placeholder='Email'
-              onChange={onChange} 
-              data-bs-theme='dark'
-            />
-          </div>
-
-          <div className="form-group mb-2">
-            <input
-              className='form-control'
-              type="password"
-              name="password"
-              id="password"
-              placeholder='Password'
-              onChange={onChange} 
-              data-bs-theme='dark'
-            />
-          </div>
-
-          <div className="form-group">
-            <button type='submit' className='btn btn-dark'>Submit</button>
-          </div>
-
-        </form>
-      </div>
-    </>
   )
 }
 
