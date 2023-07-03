@@ -1,4 +1,4 @@
-import Navbar from 'react-bootstrap/Navbar'
+import Container from 'react-bootstrap/Container'
 
 function Footer() {
   return (

@@ -19,7 +19,7 @@ function UpdateNotice() {
         <ul>
           {
             changes.map((change) => (
-              <li>{change}</li>
+              <li key={change}>{change}</li>
             ))
           }
         </ul>
