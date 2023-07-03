@@ -23,7 +23,7 @@ function Header() {
   return (
       <Navbar expand="md" data-bs-theme='dark' className='mb-3'>
         <Container>
-          <Navbar.Brand id='/' onClick={navLink}>Personal Book Archive</Navbar.Brand>
+          <Navbar.Brand id='/' onClick={navLink}>Personal Book Archive v11:26</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-collapsible" />
           <Navbar.Collapse id="navbar-collapsible">
             <Nav className="ms-auto">
