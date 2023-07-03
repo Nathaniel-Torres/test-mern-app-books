@@ -19,7 +19,7 @@ function Header() {
   return (
       <Navbar expand="md" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href='/'>Books.io</Navbar.Brand>
+          <Navbar.Brand href='/'>Personal Book Archive</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-collapsible" />
           <Navbar.Collapse id="navbar-collapsible">
             <Nav className="ms-auto">
