@@ -75,6 +75,7 @@ function Register() {
               id="name"
               placeholder='Enter your name'
               onChange={onChange} 
+              data-bs-theme='dark'
             />
           </div>
 
@@ -86,6 +87,7 @@ function Register() {
               id="email"
               placeholder='Enter your email'
               onChange={onChange} 
+              data-bs-theme='dark'
             />
           </div>
 
@@ -97,6 +99,7 @@ function Register() {
               id="password"
               placeholder='Enter your new password'
               onChange={onChange} 
+              data-bs-theme='dark'
             />
           </div>
 
@@ -108,6 +111,7 @@ function Register() {
               id="cpassword"
               placeholder='Confirm your new password'
               onChange={onChange} 
+              data-bs-theme='dark'
             />
           </div>
 

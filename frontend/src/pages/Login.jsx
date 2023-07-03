@@ -68,6 +68,7 @@ function Login() {
               id="email"
               placeholder='Email'
               onChange={onChange} 
+              data-bs-theme='dark'
             />
           </div>
 
@@ -79,6 +80,7 @@ function Login() {
               id="password"
               placeholder='Password'
               onChange={onChange} 
+              data-bs-theme='dark'
             />
           </div>
 
