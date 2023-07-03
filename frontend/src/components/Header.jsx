@@ -17,7 +17,7 @@ function Header() {
   }
 
   return (
-      <Navbar expand="md" className="bg-body-tertiary">
+      <Navbar expand="md" className='text-light'>
         <Container>
           <Navbar.Brand href='/'>Personal Book Archive</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-collapsible" />
