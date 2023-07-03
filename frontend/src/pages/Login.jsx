@@ -64,7 +64,7 @@ function Login() {
 
           <Col className='d-none d-md-grid' md='4'>
             <Container className='d-flex justify-content-center align-items-center'>
-              <img src="../assets/images/login.svg" alt="..." />
+              <img id='login-image' src="./assets/images/login.svg" alt="..." />
             </Container>
           </Col>
 

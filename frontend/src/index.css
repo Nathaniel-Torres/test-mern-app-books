@@ -9,3 +9,8 @@ body {
   font-family: 'Custom Font';
   background: linear-gradient(to right, slateblue, tomato) no-repeat fixed;
 }
+
+#login-image {
+  width: 100%;
+  object-fit: contain;
+}
