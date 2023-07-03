@@ -16,10 +16,14 @@ function Header() {
     navigate('/login')
   }
 
+  const navLink = (e) => {
+    navigate(e.target.id)
+  }
+
   return (
-      <Navbar expand="md" className='text-light'>
+      <Navbar expand="md" data-bs-theme='dark' className='mb-3'>
         <Container>
-          <Navbar.Brand href='/'>Personal Book Archive</Navbar.Brand>
+          <Navbar.Brand id='/'>Personal Book Archive</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbar-collapsible" />
           <Navbar.Collapse id="navbar-collapsible">
             <Nav className="ms-auto">
@@ -31,11 +35,11 @@ function Header() {
                 </Nav.Link>
               ) : (
                 <>
-                  <Nav.Link href="/login">
+                  <Nav.Link id="/login">
                     <i className="bi bi-arrow-left"></i>
                     Login
                   </Nav.Link>
-                  <Nav.Link href="/register">
+                  <Nav.Link id="/register">
                     <i className="bi bi-person"></i>
                     Register
                   </Nav.Link>
