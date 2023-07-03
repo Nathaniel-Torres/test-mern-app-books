@@ -10,3 +10,8 @@ body {
   background: linear-gradient(to right, slateblue, tomato) no-repeat fixed;
   color: white;
 }
+
+.form-control {
+  background-color: rgba(82, 82, 82, 0.644);
+  color: white;
+}
