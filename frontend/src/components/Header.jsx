@@ -23,7 +23,9 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="md" variant='dark' className='bg-dark mb-3'>
       <Container>
-        <Navbar.Brand id='/' onClick={navLink}>Book Record</Navbar.Brand>
+        <Navbar.Brand id='/' className='cursor-pointer' onClick={navLink}>
+          Personal Book Library
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-collapsible" />
         <Navbar.Collapse id="navbar-collapsible">
           <Nav className="ms-auto">
