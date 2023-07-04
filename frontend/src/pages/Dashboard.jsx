@@ -49,7 +49,9 @@ function Dashboard() {
 
   const SwalFire = () => {
     reactSwal.fire({
-      html: BookForm
+      html: (
+        BookForm
+      )
     })
   }
 
