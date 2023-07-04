@@ -43,14 +43,6 @@ function Dashboard() {
     return <Spinner />
   }
 
-  const SwalFire = () => {
-    reactSwal.fire({
-      html: (
-        BookForm
-      )
-    })
-  }
-
   return (
     <Container className='h-100'>
       <Container className='d-flex gap-2 mb-2'>
