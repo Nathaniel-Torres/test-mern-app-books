@@ -8,6 +8,8 @@ import { displayBooks, reset } from '../features/books/BookSlice'
 import { toast } from 'react-toastify'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
+import Swal from 'sweetalert2'
+import Button from 'react-bootstrap/Button'
 
 function Dashboard() {
   const navigate = useNavigate()
@@ -42,6 +44,12 @@ function Dashboard() {
     return <Spinner />
   }
 
+  const SwalFire = () => {
+    Swal.fire({
+      html: 'Test'
+    })
+  }
+
   return (
     <Container className='h-100'>
       <Container className='d-flex gap-2 mb-2'>
@@ -60,6 +68,9 @@ function Dashboard() {
             <h6>You have no books in your library.</h6>
           </Row>
         )}
+      </Container>
+      <Container className='my-3'>
+        <Button type='button' onClick={SwalFire} variant='secondary' className='text-light'>Test</Button>
       </Container>
       <BookForm />
     </Container>
