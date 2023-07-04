@@ -72,7 +72,7 @@ function Register() {
           <Container className='bg-light rounded-3 py-4 mb-4'>
             <Form onSubmit={onSubmit}>
               <Row className='text-center mb-2'>
-                <i className='login-logo bi bi-box-arrow-in-right cursor-pointer'></i>
+                <i className='login-logo bi bi-person-badge cursor-pointer'></i>
                 <h1 className='fw-bold'>Create an account</h1>
                 <p>To start using this app, create an account if you do not have one.</p>
               </Row>

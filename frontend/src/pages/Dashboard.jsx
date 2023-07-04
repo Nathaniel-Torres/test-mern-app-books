@@ -6,6 +6,7 @@ import BookItem from '../components/BookItem'
 import Spinner from '../components/Spinner'
 import { displayBooks, reset } from '../features/books/BookSlice'
 import { toast } from 'react-toastify'
+import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 function Dashboard() {
@@ -42,27 +43,26 @@ function Dashboard() {
   }
 
   return (
-    <Row className='h-100'>
-      <div className="container my-3 text-center">
-        <h1>Welcome {user && user.name }</h1>
-      </div>
-
-      <div className="container mb-4">
-        <h1 className='lead fw-bold'>Your Book Collection</h1>
-      </div>
-
-      <div className="container mb-4">
+    <Container className='h-100'>
+      <Container className='d-flex gap-2 mb-2'>
+        <h4 className='text-light'><i className='bi bi-kanban'></i>&nbsp;&nbsp;Your Boook Collection</h4>
+      </Container>
+      <Container className='mb-4'>
         { books.length > 0 ? (
-          <div className="row">
+          <Row>
             {books.map((book) => (
               <BookItem key={book._id} book={book}/>
             ))}
-          </div>
-        ) : (<h3>You have no books in library.</h3>)}
-      </div>
-
+          </Row>
+        ) : (
+          <Row className='bg-light text-center py-5 rounded-3'>
+            <i className='login-logo bi bi-info-circle'></i>
+            <h6>You have no books in your library.</h6>
+          </Row>
+        )}
+      </Container>
       <BookForm />
-    </Row>
+    </Container>
   )
 }
 
