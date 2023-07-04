@@ -9,9 +9,12 @@ import { toast } from 'react-toastify'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 import Button from 'react-bootstrap/Button'
 
 function Dashboard() {
+  const reactSwal = withReactContent(Swal)
+
   const navigate = useNavigate()
   const dispatch = useDispatch()
   
@@ -45,7 +48,7 @@ function Dashboard() {
   }
 
   const SwalFire = () => {
-    Swal.fire({
+    reactSwal.fire({
       html: (<BookForm />)
     })
   }
