@@ -1,7 +1,7 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import BookForm from '../components/BookForm'
+//import BookForm from '../components/BookForm'
 import BookItem from '../components/BookItem'
 import Spinner from '../components/Spinner'
 import { displayBooks, reset } from '../features/books/BookSlice'
@@ -49,9 +49,83 @@ function Dashboard() {
 
   const SwalFire = () => {
     reactSwal.fire({
-      html: (<BookForm />)
+      html: BookForm
     })
   }
+
+  // try
+
+  const [bookData, setBookData] = useState({
+    title: '',
+    desc: '',
+    price: '',
+  })
+
+  const onSubmit = e => {
+    e.preventDefault()
+
+    dispatch(addBook(bookData))
+  }
+
+  const onChange = (e) => {
+    setBookData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }))
+  }
+
+  const BookForm = (
+    <div className='container bg-secondary rounded py-3'>
+      <form onSubmit={onSubmit}>
+
+        <h3 className="text-light mb-3">Add New Book</h3>
+        <p className="text-light mb-4">Fill in the fields to add a book.</p>
+
+        <div className="form-group mb-2">
+          <input
+            className='form-control'
+            type="text"
+            name="title"
+            id="title"
+            placeholder='Book title'
+            onChange={onChange} 
+            value={bookData.title}
+          />
+        </div>
+
+        <div className="form-group mb-2">
+          <input
+            className='form-control'
+            type="text"
+            name="desc"
+            id="desc"
+            placeholder='Book Description'
+            onChange={onChange} 
+            value={bookData.desc}
+          />
+        </div>
+
+        <div className="form-group mb-2">
+          <input
+            className='form-control'
+            type="number"
+            name="price"
+            id="price"
+            placeholder='Book Price'
+            onChange={onChange} 
+            value={bookData.price}
+          />
+        </div>
+
+        <div className="form-group">
+          <button type='submit' className='btn btn-dark'>Submit</button>
+        </div>
+
+      </form>
+    </div>
+  )
+
+  // try
 
   return (
     <Container className='h-100'>
