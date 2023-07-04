@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addBook } from '../features/books/BookSlice'
 
-function BookForm() {
+function BookForm({isShowed, ...rest}) {
   const [bookData, setBookData] = useState({
     title: '',
     desc: '',
@@ -15,6 +15,8 @@ function BookForm() {
     e.preventDefault()
 
     dispatch(addBook(bookData))
+
+    isShowed(false)
   }
 
   const onChange = (e) => {

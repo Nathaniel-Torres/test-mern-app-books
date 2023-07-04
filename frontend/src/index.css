@@ -5,6 +5,10 @@
   src: url('./fonts/custom-font.ttf');
 }
 
+html {
+  font-size: 90%;
+}
+
 body {
   font-family: 'Custom Font';
   background: linear-gradient(to right, slateblue, tomato) no-repeat fixed;
@@ -35,4 +39,8 @@ body {
   font-size: 5rem;
   color: white;
   transition: all 0.5s ease-in-out;
+}
+
+.vh-70 {
+  height: 70vh;
 }

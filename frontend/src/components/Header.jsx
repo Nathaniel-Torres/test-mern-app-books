@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../features/auth/AuthSlice'
 import Container from 'react-bootstrap/Container'
@@ -29,24 +29,24 @@ function Header() {
   return (
     <Navbar collapseOnSelect expand="md" variant='dark' className='bg-dark mb-3'>
       <Container>
-        <Navbar.Brand id='/' href='#' className='cursor-pointer' onClick={navLink}>
+        <Navbar.Brand id='/' className='cursor-pointer' onClick={navLink}>
           Personal Book Library
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-collapsible" />
         <Navbar.Collapse id="navbar-collapsible">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto gap-2">
               
             {user ? (
               <>
                 <Navbar.Text>Signed in as: {user.name}</Navbar.Text>
-                <Nav.Link  href='#' onClick={onLogout}>
-                  <i className='bi bi-arrow-right'></i>
+                <Nav.Link onClick={onLogout} className='bg-danger text-light rounded'>
+                  <i className='bi bi-box-arrow-right'></i>
                   &nbsp;&nbsp;Logout
                 </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link  href='#' id="/login" onClick={navLink}>
+                <Nav.Link href='#' id="/login" onClick={navLink}>
                   <i className="bi bi-arrow-left"></i>
                   &nbsp;&nbsp;Login
                 </Nav.Link>
