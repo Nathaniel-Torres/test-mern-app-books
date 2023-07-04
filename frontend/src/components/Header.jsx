@@ -17,13 +17,19 @@ function Header() {
   }
 
   const navLink = (e) => {
-    navigate(e.target.id)
+    if(e.target.id === '/'){
+      if(user){
+        navigate(e.target.id)
+      }
+    } else {
+      navigate(e.target.id)
+    }
   }
 
   return (
     <Navbar collapseOnSelect expand="md" variant='dark' className='bg-dark mb-3'>
       <Container>
-        <Navbar.Brand id='/' className='cursor-pointer' onClick={navLink}>
+        <Navbar.Brand id='/' href='#' className='cursor-pointer' onClick={navLink}>
           Personal Book Library
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbar-collapsible" />
@@ -33,18 +39,18 @@ function Header() {
             {user ? (
               <>
                 <Navbar.Text>Signed in as: {user.name}</Navbar.Text>
-                <Nav.Link onClick={onLogout}>
+                <Nav.Link  href='#' onClick={onLogout}>
                   <i className='bi bi-arrow-right'></i>
                   &nbsp;&nbsp;Logout
                 </Nav.Link>
               </>
             ) : (
               <>
-                <Nav.Link id="/login" onClick={navLink}>
+                <Nav.Link  href='#' id="/login" onClick={navLink}>
                   <i className="bi bi-arrow-left"></i>
                   &nbsp;&nbsp;Login
                 </Nav.Link>
-                <Nav.Link id="/register" onClick={navLink}>
+                <Nav.Link  href='#' id="/register" onClick={navLink}>
                   <i className="bi bi-person"></i>
                   &nbsp;&nbsp;Register
                 </Nav.Link>

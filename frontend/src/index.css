@@ -28,6 +28,7 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
+  user-select: none;
 }
 
 .login-logo {
