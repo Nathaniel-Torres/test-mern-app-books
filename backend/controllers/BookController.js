@@ -56,9 +56,11 @@ const updateBookInfo = asyncHandler(async (req, res) => {
     throw new Error('User not authorized')
   }
 
-  const updatedBook = await Books.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  await Books.findByIdAndUpdate(req.params.id, req.body, { new: true })
 
-  res.status(200).json(updatedBook)
+  const books = await Books.find({ user: req.user.id })
+
+  res.status(200).json(books)
 })
 
 // route: /api/books/:id

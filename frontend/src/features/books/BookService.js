@@ -26,6 +26,18 @@ const viewAll = async (token) => {
   return response.data
 }
 
+const editThisBook = async (bookId, bookData, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+
+  const response = await axios.put(API_URL + bookId, bookData, config)
+
+  return response.data
+}
+
 const deleteThisBook = async (bookId, token) => {
   const config = {
     headers: {
@@ -42,6 +54,7 @@ const BookService = {
   add,
   viewAll,
   deleteThisBook,
+  editThisBook,
 }
 
 export default BookService

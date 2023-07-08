@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addBook } from '../features/books/BookSlice'
+import { addBook, editBook, displayBooks } from '../features/books/BookSlice'
+import Container from 'react-bootstrap/Container'
 
-function BookForm({isShowed, ...rest}) {
+function BookForm({isShowed, type, bookId, title, price, desc, ...rest}) {
   const [bookData, setBookData] = useState({
-    title: '',
-    desc: '',
-    price: '',
+    title: title,
+    desc: desc,
+    price: price,
   })
 
   const dispatch = useDispatch()
@@ -14,7 +15,17 @@ function BookForm({isShowed, ...rest}) {
   const onSubmit = e => {
     e.preventDefault()
 
-    dispatch(addBook(bookData))
+    const toEdit = {
+      bookId,
+      bookData,
+    }
+
+    if(type && type === 'edit'){
+      dispatch(editBook(toEdit))
+      dispatch(displayBooks())
+    } else {
+      dispatch(addBook(bookData))
+    }
 
     isShowed(false)
   }
@@ -27,11 +38,15 @@ function BookForm({isShowed, ...rest}) {
   }
 
   return (
-    <div className='container bg-secondary rounded py-3'>
+    <Container>
       <form onSubmit={onSubmit}>
 
-        <h3 className="text-light mb-3">Add New Book</h3>
-        <p className="text-light mb-4">Fill in the fields to add a book.</p>
+        {type && type === 'edit' ? (
+          <h3 className="mb-3">Edit Book</h3>
+        ) : (
+          <h3>Add new Book</h3>
+        )}
+        <p className="mb-4">Fill in the fields below.</p>
 
         <div className="form-group mb-2">
           <input
@@ -74,7 +89,7 @@ function BookForm({isShowed, ...rest}) {
         </div>
 
       </form>
-    </div>
+    </Container>
   )
 }
 

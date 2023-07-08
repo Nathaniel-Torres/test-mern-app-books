@@ -39,7 +39,7 @@ function Header() {
             {user ? (
               <>
                 <Navbar.Text>Signed in as: {user.name}</Navbar.Text>
-                <Nav.Link onClick={onLogout} className='bg-danger text-light rounded'>
+                <Nav.Link onClick={onLogout} className='text-light'>
                   <i className='bi bi-box-arrow-right'></i>
                   &nbsp;&nbsp;Logout
                 </Nav.Link>
